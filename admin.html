@@ -1,0 +1,35 @@
+
+<!DOCTYPE HTML>
+<html>
+<script>
+var checkLoginPass = function () {
+    var login = document.getElementById("login").value;
+    var pass = document.getElementById("password").value;
+    if (login === "admin" && pass === "admin") {
+        window.open("front.html");
+    }
+    else {
+        //do something
+	alert("incorrect");
+    }
+}
+</script>
+<script>
+checkLoginPass();
+</script>
+  <body>
+	
+  <p>Please create your account!</p>
+  <form>
+      <h1>Signup</h1>
+      <label for="uname"><b>Username</b></label> 
+	  <input type="text" id ="login" name="uname" required><br><br>
+	  <label for="psw"><b>Password</b></label> 
+	  <input type="Password" id="password" name="password" required><br><br>
+
+      <input type="submit" value="Submit" onclick="checkLoginPass()" name="submit">
+
+  </form>
+
+</body>
+</html>
